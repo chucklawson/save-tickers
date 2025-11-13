@@ -4,6 +4,7 @@ import RootLayout from './Pages/RootLayout/RootLayout'
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import HomePage from './Pages/HomePage/HomePage';
+import TestPopUp from './Pages/TestPopUp/TestPopUp';
 
 
 const router = createBrowserRouter([
@@ -11,7 +12,8 @@ const router = createBrowserRouter([
     path: '/',
     element: <RootLayout />,
     children: [
-      {path: '/', element: <HomePage/>}
+      {path: '/', element: <HomePage/>},
+      {path: '/testpopup', element: <TestPopUp/>},
     ]
   },
 

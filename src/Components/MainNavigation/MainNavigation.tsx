@@ -1,4 +1,5 @@
 import home from '../../srcImages/home.png'
+import robot from '../../../src/srcImages/robot.png'
 import Tab from '../Tab/Tab'
 
 function MainNavigation(){
@@ -11,6 +12,7 @@ function MainNavigation(){
             {/* this grouping builds menu items from the left to right on the left side of screen */}
             <div className="left md:w-3/4 sm:w-1/3 flex">
               <Tab pagePath='/' tabImage = {home} tabText='Home' tabWidth='125px'/>
+              <Tab pagePath='/testpopup' tabImage = {robot} tabText='Test PopUp' tabWidth='135px'/>
             </div>
 
 

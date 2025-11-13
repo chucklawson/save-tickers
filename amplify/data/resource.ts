@@ -9,9 +9,16 @@ and "delete" any "Todo" records.
 const schema = a.schema({
   SaveTickers: a
     .model({
-      content: a.string(),
+      id: a.id().required(),
+      ticker: a.string().required(),
+      purchaseDate: a.string().required(), // YYYY-MM-DD
+      quantity: a.float().required(),
+      costPerShare: a.float().required(),
+      totalCost: a.float().required(),
+      userId: a.string().required(),
+      notes: a.string(),
     })
-    .authorization((allow) => [allow.owner()]),
+    .authorization((allow) => [allow.owner()])
 });
 
 export type Schema = ClientSchema<typeof schema>;
